@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Fonte SAP da Adventure Works
+    schema: sap_adw 
+    tables:
+      - name: product
+        columns:
+          - name: productid
+            tests: 
+              - unique
+              - not_null
+      - name: productsubcategory
+        columns:
+          - name: productsubcategoryid
+            tests: 
+              - unique
+              - not_null
+      - name: productcategory
+        columns:
+          - name: productcategoryid
+            tests: 
+              - unique
+              - not_null
+      - name: productmodel
+        columns:
+          - name: productmodelid
+            tests: 
+              - unique
+              - not_null
+
+        
