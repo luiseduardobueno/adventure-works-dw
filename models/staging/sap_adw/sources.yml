@@ -36,6 +36,7 @@ sources:
       - name: countryregion
       - name: address
       - name: salesorderheader
+      - name: salesorderdetail
 
 
         
