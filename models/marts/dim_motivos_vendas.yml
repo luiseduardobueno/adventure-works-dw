@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_motivos_vendas
+    description: Dimensão dos motivos das vendas da Adventure Works. Uma linha por pedido/venda, com informações dos motivos e tipos agrupadas quando houver mais de um.
+    columns:
+      - name: sk_motivo_venda
+        description: Surrogate key da dimensão motivos das vendas.
+        tests:
+          - not_null
+          - unique
+      
+      - name: id_venda
+        description: Chave estrangeira da dimensão motivos das vendas.
+        
+      - name: motivo_venda_agrupado
+        description: Nome do produto.
+        
+      - name: tipo_motivo_venda_agrupado
+        description: Número do produto.

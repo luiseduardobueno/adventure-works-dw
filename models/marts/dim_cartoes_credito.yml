@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_cartoes_credito
+    description: Dimensão dos cartões de crédito utilizados nas compras da Adventure Works. Uma linha por cartão.
+    columns:
+      - name: sk_cartao_credito
+        description: Surrogate key da dimensão cartões de crédito.
+        tests:
+          - not_null
+          - unique
+      
+      - name: id_cartao_credito
+        description: Chave primária natural da dimensão cartões de crédito.
+        
+      - name: tipo_cartao_credito
+        description: Tipo de cartão de crédito.
+        
+      - name: num_cartao_credito
+        description: Número do cartão de crédito.
+
+      - name: mes_exp_cartao_credito
+        description: Mês de validade do cartão de crédito.
+
+      - name: ano_exp_cartao_credito
+        description: Ano de validade do cartão de crédito.

@@ -1,0 +1,120 @@
+version: 2
+
+models:
+  - name: fct_vendas
+    description: Tabela com fatos de vendas, cada linha descreve informações de um produto vendido.
+    columns:
+      
+      - name: sk_venda_item
+        description: surrogate key da tabela fato vendas.
+        tests:
+          - not_null
+          - unique
+
+      - name: id_venda
+        description: chave primária natural da tabela vendas_cabeçalho.
+
+      - name: id_venda_detalhe
+        description: chave primária natural da tabela vendas detalhes.
+
+      - name: id_cliente
+        description: chave estrangeira da tabela de clientes. 
+
+      - name: id_endereco
+        description: chave estrangeira da tabela de endereços. 
+
+      - name: id_cartao_credito
+        description: chave estrangeira da tabela de cartão crédito. 
+
+      - name: id_produto
+        description: chave estrangeira da tabela de produtos.
+
+      - name: data_venda
+        description: data da venda.
+
+      - name: data_entrega
+        description: data de entrega da venda.
+
+      - name: data_envio
+        description: data do envio da venda. 
+
+      - name: nome_cliente
+        description: nome do cliente.
+
+      - name: nome_cidade
+        description: nome da cidade.
+
+      - name: sigla_estado
+        description: sigla do estado.
+
+      - name: nome_estado
+        description: nome do estado.
+
+      - name: nome_pais
+        description: nome do país.
+
+      - name: status_venda
+        description: status da venda.
+
+      - name: motivo_venda_agrupado
+        description: motivo da venda, agrupado caso seja mais de um.
+
+      - name: tipo_motivo_venda_agrupado
+        description: tipo do motivo da venda, agrupado caso seja mais de um.
+
+      - name: tipo_cartao_credito
+        description: tipo do cartão de crédito.
+
+      - name: nome_produto
+        description: nome do produto vndido.
+
+      - name: numero_produto
+        description: número do produto.
+
+      - name: cor_produto
+        description: cor do produto.
+
+      - name: nome_modelo
+        description: modelo do produto.
+
+      - name: nome_subcategoria
+        description: subcategoria do produto.
+
+      - name: nome_categoria
+        description: categoria do produto.   
+
+      - name: subtotal_liquido_pedido
+        description: subtotal líquido do valor do pedido. 
+
+      - name: imposto
+        description: valor de imposto da venda, sendo um valor único por pedido.
+
+      - name: imposto_ponderado
+        description: métrica criada através do valor total de imposto dividido pelo número de produtos no pedido.
+
+      - name: frete
+        description: valor de frete da venda, sendo um valor único por pedido.
+
+      - name: frete_ponderado
+        description: métrica criada através do valor total de frete dividido pelo número de produtos no pedido.
+
+      - name: total_liquido_pedido
+        description: valor total líquido do pedido, considerando subtotal_liquido_pedido + tx_imposto + frete.
+
+      - name: qtd_produto
+        description: quantidade vendida do produto. 
+
+      - name: preco_unitario_bruto
+        description: valor unitário bruto do produto, ou seja, valor unitário sem descontos.
+
+      - name: preco_total_bruto
+        description: valor total bruto do produto, ou seja, valor unitário sem descontos multiplicado pela quantidade total do produto.
+
+      - name: desc_preco_unitario
+        description: valor de desconto do produto.
+
+      - name: preco_unitario_liquido
+        description: valor unitário líquido do produto, ou seja, valor unitário com descontos.
+
+      - name: preco_total_liquido
+        description: valor total líquido do produto, ou seja, valor unitário com descontos multiplicado pela quantidade total do produto.

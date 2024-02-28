@@ -23,7 +23,7 @@ with
 
     , joined_tabelas as (
         select
-            row_number() over (order by stg_clientes.id_cliente) as sk_cliente --surrogate key auto incremental
+            stg_clientes.id_cliente as sk_cliente
             , stg_clientes.id_cliente
             , stg_pessoas.id_pessoa
             , stg_lojas.id_loja

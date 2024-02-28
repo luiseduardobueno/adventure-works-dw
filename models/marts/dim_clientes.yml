@@ -12,9 +12,6 @@ models:
 
       - name: id_cliente
         description: Chave primária natural da dimensão de clientes.
-        tests:
-          - not_null
-          - unique
       
       - name: id_pessoa
         description: chave primária natural de pessoas.
@@ -23,4 +20,4 @@ models:
         description: chave primária natural de lojas.
         
       - name: nome_cliente
-        description: nome do cliente (pessoa ou loja).
+        description: nome do cliente, pondendo ser pessoa ou loja.
