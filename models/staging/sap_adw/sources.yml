@@ -29,5 +29,14 @@ sources:
             tests: 
               - unique
               - not_null
+      - name: customer
+      - name: person
+      - name: store
+      - name: stateprovince
+      - name: countryregion
+      - name: address
+      - name: salesorderheader
+      - name: salesorderdetail
+
 
         

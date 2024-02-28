@@ -2,22 +2,19 @@ version: 2
 
 models:
   - name: dim_produtos
-    description: Dimensão de produtos da Adventure Works. Uma linha por produto, com informações de modelos, categorias e subcategorias.
+    description: Dimensão de produtos vendidos da Adventure Works. Uma linha por produto vendido, com informações de modelos, categorias e subcategorias.
     columns:
-      - name: id_produto
-        description: Chave primária da dimensão de produtos.
+      - name: sk_produto
+        description: Surrogate key da dimensão de produtos.
         tests:
           - not_null
           - unique
-        
-      - name: id_modelo
-        description: Chave estrangeira da tabela de modelos.
-        
-      - name: id_subcategoria
-        description: Chave estrangeira da tabela de subcategorias.
-        
-      - name: id_categoria
-        description: Chave estrangeira da tabela de categorias.
+      
+      - name: id_produto
+        description: Chave primária natural da dimensão de produtos.
+        tests:
+          - not_null
+          - unique
         
       - name: nome_produto
         description: Nome do produto.
