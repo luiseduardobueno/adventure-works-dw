@@ -29,5 +29,14 @@ sources:
             tests: 
               - unique
               - not_null
+      - name: customer
+        tests: 
+          - unique
+          - not_null
+      - name: person
+      - name: stateprovince
+      - name: countryregion
+      - name: address
+
 
         
