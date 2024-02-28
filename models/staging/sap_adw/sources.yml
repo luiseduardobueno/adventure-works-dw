@@ -37,6 +37,9 @@ sources:
       - name: address
       - name: salesorderheader
       - name: salesorderdetail
+      - name: salesorderheadersalesreason
+      - name: salesreason
+      - name: creditcard
 
 
         
