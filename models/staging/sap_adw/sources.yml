@@ -30,13 +30,12 @@ sources:
               - unique
               - not_null
       - name: customer
-        tests: 
-          - unique
-          - not_null
       - name: person
+      - name: store
       - name: stateprovince
       - name: countryregion
       - name: address
+      - name: salesorderheader
 
 
         

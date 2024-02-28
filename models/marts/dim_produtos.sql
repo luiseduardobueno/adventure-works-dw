@@ -25,7 +25,8 @@ with
 
     , joined_tabelas as (
         select
-            stg_produtos.id_produto
+            row_number() over (order by stg_produtos.id_produto) as sk_produto --surrogate key auto incremental
+            , stg_produtos.id_produto
             , stg_produtos.id_modelo
             , stg_produtos.id_subcategoria
             , stg_subcategorias.id_categoria

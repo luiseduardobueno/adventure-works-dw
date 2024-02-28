@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_localidades
+    description: Dimensão de localidades das vendas da Adventure Works. Uma linha por endereço, contendo informações de endereço, cidade, estado e país.
+    columns:
+      - name: sk_localidade
+        description: surrogate key da dimensão de localidades.
+        tests:
+          - not_null
+          - unique
+
+      - name: id_endereco
+        description: Chave primária natural da dimensão de endereços.
+        tests:
+          - not_null
+          - unique
+      
+      - name: id_estado
+        description: chave primária natural de estados.
+      
+      - name: id_pais
+        description: chave primária natural de países.
+        
+      - name: endereco
+        description: descrição do endereço.
+
+      - name: sigla_estado
+        description: sigla referente ao estado.
+      
+      - name: nome_estado
+        description: nome do estado.
+      
+      - name: nome_pais
+        description: nome do país.
