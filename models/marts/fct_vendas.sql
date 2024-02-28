@@ -89,8 +89,5 @@ with
             int_vendas.id_cartao_credito = cartoes_credito.sk_cartao_credito
     )
 
-    --select sum(preco_total_bruto) as preco_total_bruto, sum(preco_total_liquido) as preco_total_liquido
     select *
     from joined_tabelas
-    --where data_venda between '2011-01-01' and '2011-12-31'
-    -- vendas brutas no ano de 2011 foram de $12.646.112,16
