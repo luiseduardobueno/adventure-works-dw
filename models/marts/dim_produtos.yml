@@ -12,10 +12,7 @@ models:
       
       - name: id_produto
         description: Chave primária natural da dimensão de produtos.
-        tests:
-          - not_null
-          - unique
-        
+
       - name: nome_produto
         description: Nome do produto.
         

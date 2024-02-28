@@ -12,9 +12,6 @@ models:
 
       - name: id_endereco
         description: Chave primária natural da dimensão de endereços.
-        tests:
-          - not_null
-          - unique
       
       - name: id_estado
         description: chave primária natural de estados.

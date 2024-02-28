@@ -7,4 +7,4 @@ with
     )
 
 select *
-from fonte_vendas_cab_motivo_venda
+from fonte_vendas_cab_motivo_venda 

@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: int_vendas__pedido_itens
+    description: Modelo intermediário que faz a relação 1-N de vendas para itens.
+    columns:
+      - name: sk_venda_item
+        description: surrogate key da tabela pedido itens.
+        tests:
+          - not_null
+          - unique
+
+      - name: id_venda
+        description: chave primária natural da tabela vendas_cabeçalho.
+
+      - name: id_venda_detalhe
+        description: chave primária natural da tabela vendas detalhes.
+
+      - name: id_cliente
+        description: chave estrangeira da tabela de clientes. 
+
+      - name: id_endereco
+        description: chave estrangeira da tabela de endereços. 
+
+      - name: id_cartao_credito
+        description: chave estrangeira da tabela de cartão crédito. 
+
+      - name: id_produto
+        description: chave estrangeira da tabela de produtos.
+
+      - name: data_venda
+        description: data da venda.
+
+      - name: data_entrega
+        description: data de entrega da venda.
+
+      - name: data_envio
+        description: data do envio da venda. 
+
+      - name: status_venda
+        description: status da venda.
+
+      - name: subtotal_liquido_pedido
+        description: subtotal líquido do valor do pedido. 
+
+      - name: imposto
+        description: valor de imposto da venda, sendo um valor único por pedido.
+
+      - name: frete
+        description: valor de frete da venda, sendo um valor único por pedido.
+
+      - name: total_liquido_pedido
+        description: valor total líquido do pedido, considerando subtotal_liquido_pedido + tx_imposto + frete.
+
+      - name: qtd_produto
+        description: quantidade vendida do produto. 
+
+      - name: preco_unitario_bruto
+        description: valor unitário bruto do produto.
+
+      - name: preco_total_bruto
+        description: valor total bruto do produto.
+
+      - name: desc_preco_unitario
+        description: valor de desconto do produto.
+
+      - name: preco_unitario_liquido
+        description: valor unitário líquido do produto.
+
+      - name: preco_total_liquido
+        description: valor total líquido do produto.

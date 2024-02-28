@@ -1,7 +1,7 @@
 with
     stg_vendas as (
-        select
-            distinct id_endereco
+        select distinct 
+            id_endereco
         from {{ ref('stg_erp__vendas_cabecalho') }}
     )
     
@@ -25,7 +25,7 @@ with
 
     , joined_tabelas as (
         select
-            row_number() over (order by stg_vendas.id_endereco) as sk_localidade --surrogate key auto incremental
+            stg_vendas.id_endereco as sk_localidade
             , stg_vendas.id_endereco
             , stg_estados.id_estado
             , stg_paises.id_pais
