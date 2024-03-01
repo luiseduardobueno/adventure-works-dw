@@ -49,9 +49,15 @@ with
             , localidades.nome_estado
             , localidades.nome_pais
             , int_vendas.status_venda
-            , motivos_vendas.motivo_venda_agrupado
+            , case 
+                when motivos_vendas.motivo_venda_agrupado is null then '(motivo não informado)'
+                else motivos_vendas.motivo_venda_agrupado
+            end motivo_venda_agrupado
             , motivos_vendas.tipo_motivo_venda_agrupado
-            , cartoes_credito.tipo_cartao_credito
+            , case 
+                when cartoes_credito.tipo_cartao_credito is null then '(cartão não utilizado)'
+                else cartoes_credito.tipo_cartao_credito
+            end tipo_cartao_credito
             , produtos.nome_produto
             , produtos.numero_produto
             , produtos.cor_produto
